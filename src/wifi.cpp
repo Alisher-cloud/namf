@@ -152,7 +152,7 @@ namespace NAMWiFi {
         //can we reconnect?
         if (state == UNSET && credentialPresent()) {
             static unsigned long lastCheck=millis();
-            if (millis() - lastCheck > 98*1000) {
+            if (millis() - lastCheck > 54*1000) {
                 debug_out(F("WiFi state is UNSET and client SSID present. Trying to connect...."), DEBUG_MIN_INFO);
                 connectWifi();
                 lastCheck = millis();
